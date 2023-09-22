@@ -39,8 +39,8 @@ const App = () => {
   return (
     <main>
       
-      <div className="navbar bg-base-100 w-screen flex justify-center items-center md:block">
-        <h1 className='text-2xl text-purple-500'>
+      <div className="navbar bg-base-100 w-screen flex justify-center items-center md:mb-16">
+        <h1 className='text-2xl md:text-4xl text-purple-500'>
           <Typewriter
               options={{
                 strings: ['YouDownloader'],
