@@ -52,7 +52,7 @@ const App = () => {
       </div>
 
       <div className='flex items-center justify-center mt-3'>
-        <input type="text" onChange={(e)=> setUserLink(e.target.value)} value={userLink} placeholder="Inserisci qui il link" className="input input-bordered input-secondary w-full max-w-xs" />
+        <input type="text" onChange={(e)=> setUserLink(e.target.value)} value={userLink} placeholder="Insert link here :D" className="input input-bordered input-secondary w-full max-w-xs" />
         <button onClick={fetchData} className="btn btn-outline btn-info p-2 ms-1">Search</button>
       </div>
 
