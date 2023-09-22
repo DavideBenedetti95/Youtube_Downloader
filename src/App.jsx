@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import Typewriter from 'typewriter-effect';
 
 const App = () => {
 
@@ -7,7 +8,6 @@ const App = () => {
   const [userLink, setUserLink] = useState('')
   const [loading, setLoading] = useState(false)
   const [selectedUrl, setSelectedUrl] = useState(null)
-
 
   const fetchData = async () => {
     setLoading(true);
@@ -39,8 +39,16 @@ const App = () => {
   return (
     <main>
       
-      <div className="navbar bg-base-100">
-       <a className="btn btn-ghost normal-case text-xl">YouDownloader</a>
+      <div className="navbar bg-base-100 w-screen flex justify-center items-center md:block">
+        <h1 className='text-2xl text-purple-500'>
+          <Typewriter
+              options={{
+                strings: ['YouDownloader'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+        </h1>
       </div>
 
       <div className='flex items-center justify-center mt-3'>
