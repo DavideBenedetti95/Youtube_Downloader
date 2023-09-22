@@ -73,7 +73,7 @@ const App = () => {
                     <option key={index}>{element.ext} {element.format_note} {element.protocol} - {element.audio_channels ? `Audio Channel: ${element.audio_channels}` : ""}</option>
                   ))}
                 </select>
-                <button className='ms-4 mt-4'>
+                <button className='ms-2 md:ms-4 mt-4'>
                     <a href={selectedUrl} download="video.mp4" className="btn btn-primary mt-2" disabled={!selectedUrl}>Scarica</a>
                 </button>
               </div>
