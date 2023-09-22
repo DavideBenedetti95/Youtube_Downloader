@@ -19,7 +19,7 @@ const App = () => {
         video_url: userLink,
       },
       headers: {
-        'X-RapidAPI-Key': import.meta.env.REACT_APP_VITE_RAPID_API_KEY,
+        'X-RapidAPI-Key': process.env.VITE_RAPID_API_KEY,
         'X-RapidAPI-Host': 'youtube-audio-video-download.p.rapidapi.com',
       },
     };
