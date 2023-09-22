@@ -39,6 +39,10 @@ const App = () => {
   return (
     <main>
       
+      <div className="navbar bg-base-100">
+       <a className="btn btn-ghost normal-case text-xl">YouDownloader</a>
+      </div>
+
       <div className='flex items-center justify-center mt-3'>
         <input type="text" onChange={(e)=> setUserLink(e.target.value)} value={userLink} placeholder="Inserisci qui il link" className="input input-bordered input-secondary w-full max-w-xs" />
         <button onClick={fetchData} className="btn btn-outline btn-info p-2 ms-1">Search</button>
@@ -46,7 +50,7 @@ const App = () => {
 
       {loading ? 
         <div className='flex items-center justify-center w-screen h-screen'>
-          <span className="loading loading-spinner text-primary"></span>
+          <span className="loading loading-bars loading-lg"></span>
         </div> : 
         
         data.title ? 
@@ -81,9 +85,13 @@ const App = () => {
           </div>
         </div>
   
-          : 
-        
+        :
+
+        data.error ?
         <h3 className='text-center mt-12 text-red-500 font-bold'>"Something Wrong, Retry!"</h3>
+        
+        :
+        null
       }
     </main>
   )
